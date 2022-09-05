@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js_test/test1.html</title>
+<script type="text/javascript">
+function fun1(){
+	if(document.getElementById("name1").value==""){
+		document.getElementById("namediv").innerHTML="이름을 입력하세요.";
+		document.fr.name.focus();
+		return false;
+	}
+	if(document.fr.jumin1.value=="" && document.fr.jumin2.value==""){
+		alert("주민등록번호를 입력하세요.");
+		return false;
+	}
+	if(document.fr.id.value==""){
+		alert("아이디를 입력하세요.");
+		document.fr.id.focus();
+		return false;
+	}
+	if(document.getElementById("pw1").value==""){
+		document.getElementById("pwdiv").innerHTML="비밀번호를 입력하세요.";
+		document.fr.name.focus();
+		if(document.fr.pw.value < 4){
+			alert("비밀번호는 4 ~ 10자를 작성해야합니다.");
+		}
+		return false;
+	}
+	if(document.getElementById("pw1").value==document.getElementById("pw3").value){
+		document.getElementById("pw3div").innerHTML="비밀번호가 일치합니다.";
+		return false;
+	}else{
+		document.getElementById("pw3div").innerHTML="비밀번호가 일치하지않습니다.";
+		return false;
+	}
+	if(document.fr.email.value==""){
+		alert("이메일을 입력하세요.");
+		document.fr.email.focus();
+		return false;
+	}
+	if(document.fr.tel.value==""){
+		alert("전화번호를 입력하세요.");
+		document.fr.tel.focus();
+		return false;
+	}
+	if(document.fr.tel2.value==""){
+		alert("핸드폰번호를 입력하세요.");
+		document.fr.tel2.focus();
+		return false;
+	}
+	if(document.fr.zip.value=="" || document.fr.zip1.value==""){
+		alert("우편번호를 입력하세요.");
+		return false;
+	}
+	if(document.fr.zip3.value==""){
+		alert("주소를 입력하세요.");
+		document.fr.zip3.focus();
+		return false;
+	}
+	if(document.fr.zip4.value==""){
+		alert("상세주소를 입력하세요.");
+		document.fr.zip4.focus();
+		return false;
+	}
+	if(document.fr.member.value==""){
+		alert("회원분류를 선택하세요.");
+		return false;
+	}
+}
+function idCheck(){
+	  alert("중복확인완료");
+	}
+</script>
+</head>
+<body>
+<form action="" method="get" name="fr" onsubmit="return fun1()">
+반드시 입력하셔야 합니다.<br>
+이름 <input type="text" name="name" id="name1"><div id="namediv"></div><br>
+<p>
+주민등록번호 <input type="text" name="jumin1" size="10" maxlength="6">
+		   - <input type="password" name="jumin2" size="10" maxlength="7"><br>
+회원 ID <input type="text" name="id" maxlength="10">  <input type="button" value="중복확인" onclick="idCheck()"><br></p>
+비밀번호 <input type="password" name="pw" id="pw1" maxlength="10"><div id="pwdiv"></div><br>
+비밀번호 확인 <input type="password" name="pw2" id="pw3" maxlength="10"><div id="pw3div"></div><br>
+E-mail <input type="email" name="email" size="40"><br>
+전화번호 <input type="tel" name="tel" size="15" placeholder="(예시)051-000-1111"><br>
+핸드폰번호 <input type="tel" name="tel2" size="15" placeholder="(예시)010-000-1111"><br>
+우편번호 <input type="text" name="zip" size="7"> - <input type="text" name="zip1" size="7">
+	  <input type="button" value="우편번호 찾기" onclick="location.href='test2.html'"><br>
+	  <input type="text" name="zip3" size="50"><br>상세 주소 <input type="text" name="zip4" size="50"><br>
+회원분류 <select name="member">
+		<option value="" selected>선택해주십시오.</option>
+		<option value="1">회원1</option>
+		<option value="2">회원2</option>
+		<option value="3">회원3</option>
+      </select><br><br>
+<input type="submit" value="가입">
+<input type="reset" value="취소">
+
+
+</form>
+</body>
+</html>

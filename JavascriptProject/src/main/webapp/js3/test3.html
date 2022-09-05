@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js3/test3.html</title>
+<script type="text/javascript">
+//window - location 
+// - history
+// - document - image, div,...
+//	  		  - form - text, password, textarea
+//	  			     - checkbox, radio
+//	  			     - select
+
+//document.form이름.체크박스이름: form태그 체크박스 내장객체
+//document.form이름.체크박스이름.변수
+//=> document.form이름.체크박스이름.type 변수 : 체크박스 타입 저장
+//	 document.form이름.체크박스이름.value 변수 : 체크박스 입력된 값 저장
+//	 document.form이름.체크박스이름.checked 변수 : 체크박스 체크설정된 값 저장(true/false)
+
+//document.form이름.체크박스이름.함수() 	
+//	document.form이름.체크박스이름.click() 체크박스 체크 함	
+
+function fun1() {
+	alert(document.fr.ra[0].type);
+	alert(document.fr.ra[0].value);
+	alert(document.fr.ra[0].checked);
+}
+function fun2() {
+	// checked 변수에 false 값 저장
+	document.fr.ra[0].checked=false;
+	// 두번째 라디오 박스 click() 적용
+	documnet.fr.ra[1].click();
+}
+function fun3() {
+	if(document.fr.ra[0].checked==false && document.fr.ra[1].checked==false){
+		alert('라디오박스 체크하세요')
+		return;
+	}
+	if(document.fr.ch[0].checked==false && document.fr.ch[1].checked==false){
+		alert('체크박스 체크하세요')
+		return;
+	}
+	// 폼태그 서버 전송
+	document.fr.submit();
+}
+</script>
+</head>
+<body>
+	<form action="a.jsp" method="get" name="fr">
+		성별 : <input type="radio" name="ra" value="남">남자	
+			  <input type="radio" name="ra" value="여">여자<br>	
+		취미 : <input type="checkbox" name="ch" value="여행">여행	
+			  <input type="checkbox" name="ch" value="게임">게임<br>
+		<input type="button" value="정보확인" onclick="fun1()">
+		<input type="button" value="정보변경" onclick="fun2()">
+		<input type="button" value="제어" onclick="fun3()">
+	</form>
+</body>
+</html>

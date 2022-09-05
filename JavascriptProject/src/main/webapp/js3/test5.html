@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js3/test5.html</title>
+<script type="text/javascript">
+//window - location 
+// 		 - history
+// 		 - document - image, div,...
+//	  				- form - text, password, textarea
+//    				- checkbox, radio
+//	  				- select
+
+// document.form : 웹브라우저에서 html 문서 안에 form태그 정보 저장하는 내장객체
+// document.form이름.변수   => document.form이름.action 변수 : 연결파일저장
+// 							 document.form이름.method 변수 : 데이터전달방식 저장
+// document.form이름.함수() => document.form이름.submit() : 서버에 전송							 
+//						  => document.form이름.reset() : 폼에 내용을 초기화							 
+
+	function fun1() {
+		alert(document.fr.action);
+		alert(document.fr.method);
+		document.fr.submit();
+	}
+	function fun2() {
+		// action 변수 b.jsp 변경, method post 변경 => 전송
+		document.fr.action="b.jsp";
+		document.fr.method="post";
+		document.fr.submit();		
+	}
+	function fun3(a) {
+		// action 변수 변경 => 전송
+		document.fr.action=a;		
+		document.fr.submit();		
+	}
+</script>
+</head>
+<body>
+	<form action="a.jsp" method="get" name="fr">
+		아이디 : <input type="text" name="id"><br>	
+		<input type="submit" value="전송">
+		<input type="button" value="폼태그 정보" onclick="fun1()">
+		<input type="button" value="폼태그 정보변경 전송" onclick="fun2()">
+		<input type="button" value="장바구니" onclick="fun3('basket.jsp')">
+		<input type="button" value="바로구매" onclick="fun3('order.jsp')">
+	</form>
+</body>
+</html>
