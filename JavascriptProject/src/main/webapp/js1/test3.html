@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>나이계산하기</title>
+<script type="text/javascript">
+// 나이 = 올해연도 - 태어난연도 + 1
+
+// 올해연도 변수 선언 값을 저장 2022
+	var currentYear=2022;
+	var currentyear=2022;
+	
+// 태어난 연도 변수 선언 값을 저장 1990
+	var birthYear=1994;
+
+// 나이 계산해서 출력
+// NaN : (Not a Number)
+// 연산들은 차례대로 계산되므로 괄호로 우선순위 만들어주기, 뺄셈은 숫자끼리만 가능
+alert("나이 : "+(currentYear-birthYear+1));
+
+//변수이름 만드는 규칙
+//1. 영어문자, _(언더스코어), 숫자 사용(숫자는 첫글자로 사용할 수 없음)
+
+// var 7class=100; //에러
+// var _class=100;
+// var aclass=100;
+// var *class=400; //에러
+
+//2. 대소문자 구분, 예약어(var, if, for, class) 사용할 수 없음
+// var currentyear=2022;
+// var var=100; //에러
+
+//3. 여러 단어 연결 변수이름 중간에 대문자 birthYear, birth_Year
+//4. 변수이름 의미있게 작성
+
+
+</script>
+</head>
+<body>
+<input type="button" value="나이계산" onclick="alert(currentYear-birthYear+1)">
+
+</body>
+</html>
