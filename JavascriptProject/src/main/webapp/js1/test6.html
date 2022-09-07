@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js1/test6.html</title>
+<script type="text/javascript">
+	// 비교연산자 논리연산자 비교연산자
+	//  and(&&)연산자 : 모두 true => true, 하나라도 false => false
+	//	or(||)연산자 : 하나라도 true => true, 모두 false => false
+	//	not(!)연산자 : true => false, false => true	
+	var a=10;
+// alert(a==10); // a와 10이 같냐? //true
+// alert(a!=10); // a와 10이 다르냐? //false
+// alert(a<10); // a가 10보다 작다 //false
+// alert(a<=10); // a가 10보다 작거나 같다 //true
+// alert(a>10); // a가 10보다 크다 //false
+// alert(a>=10); // a가 10보다 크거나 같다 //true
+
+	alert(a==10 && a<=10); //true
+	alert(a==10 && a!=10); //false
+	
+	alert(a==10 || a!=10); //true
+	alert(a<10 || a!=10); //false
+	
+	alert(!a==10); //false
+	
+// 	a변수에 있는 값이 4보다 크거나 같은 경우 동시에 10보다 작거나 같은 경우
+	// 참이면 4~10 사이 값
+	// 거짓이면 4~10 사이 값이 아니다.
+	a=10;	
+	if(a>=4 && a<=10){
+		alert("4~10 사이 값이다");
+	}else{
+		alert("4~10 사이 값이 아니다");
+	}
+	
+	// a 변수에 1, 2, 3, 4 같이 저장되면
+	// a 변수 값이 1 이거나 3 이면 "남", 아니면 "여"
+	
+	a=4;
+	if(a==1 || a==3){
+		alert(남);
+	}else{
+		alert(여);
+	}
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

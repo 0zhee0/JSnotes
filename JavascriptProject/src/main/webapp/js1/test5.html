@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js1/test5.html</title>
+<script type="text/javascript">
+//비교(관계) 연산자 ==(같다), !=(다르다), <(작다), <=(작거나같다), >(크다), >=(크거나같다)
+var a=10;
+// alert(a==10); // a와 10이 같냐? //true
+// alert(a!=10); // a와 10이 다르냐? //false
+// alert(a<10); // a가 10보다 작다 //false
+// alert(a<=10); // a가 10보다 작거나 같다 //true
+// alert(a>10); // a가 10보다 크다 //false
+// alert(a>=10); // a가 10보다 크거나 같다 //true
+
+// 제어문(조건문)
+
+/*
+if(조건){
+	조건이 참이면 동작하는 명령
+}else{
+	조건이 거짓이면 동작하는 명령
+}
+*/
+a=10;
+if(a==10){
+	// 조건이 true 이면 실행될 문장
+	alert("a는 10하고 같다");
+}else{
+	// 조건이 false 이면 실행될 문장
+	alert("a는 10하고 다름");
+}
+
+a=7;
+// 양수 , 음수
+if(a<0){
+	alert(a + " : 음수");
+}else{
+	alert(a + " : 양수");
+}
+
+a=-2;
+//양수 0 음수
+if(a<0){
+	alert(a + " : 음수");
+}else if(a==0){
+	alert(a + " : 영");
+}else{
+	alert(a + " : 양수");
+}
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
