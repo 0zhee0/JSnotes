@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js2/test1.html</title>
+<script type="text/javascript">
+// 객체 : 사물, 업무, ... 주제 정의
+// (객체의 특징을 저장하는변수, 객체에서 동작하는 기능(함수))
+// 객체사용 : 객체.변수, 객체.함수() 호출해서 사용
+// 내장객체 : 자바스크립트 언어를 만들 때 만들어놓은 객체
+//			--> 문자내장객체, 배열내장객체, 숫자내장객체, 날짜내장객체,...
+// 자바스크립트에만 있는 내장객체 => 웹브라우저 내장객체 사용 (HTML DOM, Browser BOM)
+
+// window - location 
+// 	      - history
+// 	      - document - image, div,...
+// 	   			     - form - text, password, textarea
+// 	   			     - checkbox, radio
+// 	   			     - select
+	   
+	   
+// window : 웹브라우저 창 주제 (특징 저장하는 변수, 기능을 정의한 함수())
+// window.변수   : opener(창을 열게한 페이지 정보)
+// window.함수() : open()(창열기), close()(창닫기) 
+
+	function winopen() {
+		//창열기 
+// 		alert("창열기");
+// 		window.open("html페이지", "창이름 생략가능", "옵션 창크기, 창위치");
+		window.open("http://www.naver.com", "win", "width=500,height=250");
+}
+	function winopen2() {
+		// test1_win.html 페이지 창열기 // "win" 생략가능
+		window.open("test1_win.html", "win", "width=400, heigth=300, top=100, left=100");
+}
+	function winclose() {
+		window.close();
+	}
+
+</script>
+</head>
+<body>
+<input type="button" value="창열기" onclick="winopen()">
+<input type="button" value="창열기2" onclick="winopen2()">
+<input type="button" value="창닫기" onclick="winclose()">
+
+
+</body>
+</html>

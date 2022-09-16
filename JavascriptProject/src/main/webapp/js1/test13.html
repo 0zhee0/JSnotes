@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js1/test13.html</title>
+<script type="text/javascript">
+	// 내장함수 : 자바스크립트 언어를 만들 때 미리 만들어놓은 함수
+	// 내장함수 호출
+	// 	alert("함수호출");
+	
+// // 한번 더 확인 confirm("선택하세요"); => 확인 true 리턴, 취소 false 리턴	
+// 	var a = confirm("선택하세요");
+// 	alert(a);	
+// // 실습1
+// // if true이면 "확인을 누름", false이면 "취소 누름"
+// 	var b = confirm("선택하세요");
+// 	alert(b);
+// 	if (b == true) {
+// 		alert("확인을 누름");
+// 	} else {
+// 		alert("취소를 누름");}
+	
+// prompt() 대화상자에서 값을 받을 때 => 문자로 값이 저장
+// 	var c = prompt("입력하세요");
+// 	alert("입력받은 값 : " + c);	
+// 	alert("입력받은 값에 100더하기 : " + (c+100)); // 문자연결자
+// 문자를 숫자로 변경해서 더하기 => parseInt() 숫자형태문자를 정수형으로 변경
+// parseInt(숫자 형태의 문자)
+// 	alert("입력받은 값을 숫자로 변경해서 100더하기 : " + (parseInt(c)+100));
+// 	alert("입력받은 값에 100더하기 : " + (c*100)); // 자동으로 형이 바뀌어서 계산
+// ﻿NaN : Not a Number => 숫자가 아님, 문자임 => 판별하는 함수 isNaN()
+// isNaN(문자 또는 숫자형태문자 또는 숫자) => 문자 true, 숫자형태문자 또는 숫자 false
+// alert("문자, 숫자 판별 : " + isNaN(c))
+// if(isNaN(c)==true) {
+// 	alert("문자");
+// } else {
+// 	alert("숫자");
+// }
+
+// prompt() 대화상자를 통해서 값을 입력 받아서 
+// isNaN()문자, 숫자형태문자(숫자) 판별해서
+// if 문자이면 입력받은 값 그대로 출력
+//    숫자이면 parseInt() 입력받은 값 + 100 (숫자더하기)
+	var pr = prompt("입력하세요");
+	var pro = isNaN(pr);
+	if(pro==true) {
+		alert(pr);
+	} else {
+		alert(parseInt(pr)+100);
+	}
+
+
+
+	
+</script>
+</head>
+<body>
+	
+
+</body>
+</html>
