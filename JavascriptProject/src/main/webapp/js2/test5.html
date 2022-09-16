@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js2/test5.html</title>
+<script type="text/javascript">
+//window - location 
+// 		 - history
+// 		 - document - image, div,...
+//	  				- form - text, password, textarea
+//    				- checkbox, radio
+//	  				- select
+
+// document.image : 웹브라우저에서 html 문서 안에 img태그 정보 저장하는 내장객체
+// document.image이름.변수   => document.이미지이름.src 변수 : 이미지파일 저장 
+// 							  document.이미지이름.width 변수 : 이미지너비 저장
+// 							  document.이미지이름.height 변수 : 이미지높이 저장
+// 							  document.이미지이름.border 변수 : 이미지테두리선두께 저장
+
+	function fun1() {
+		alert(document.img1.src);
+		alert(document.img1.width);
+		alert(document.img1.height);
+		alert(document.img1.border);
+	}
+	function fun2() {
+	// 2.jpg변경 크기500 높이300 테두리선 두께10
+		document.img1.src="2.jpg";
+		document.img1.width=500;
+		document.img1.heigh=300;
+		document.img1.border=10;
+	}
+	function fun3() {
+	// img2 이미지 3.jpg로 변경 // 테두리선 두께 5px
+		document.img2.src="3.jpg";
+		document.img2.border=5;
+	}
+	function fun4() {
+	// img3 이미지 4.jpg로 변경 
+		document.img3.src="4.jpg";
+	}
+	function fun5() {
+	// img3 이미지 3.jpg로 변경 back
+		document.img3.src="3.jpg";
+	}
+
+
+</script>
+</head>
+<body>
+	<img src="1.jpg" width="300" height="200" border="1" name="img1">
+	<input type="button" value="이미지정보확인" onclick="fun1()">
+	<input type="button" value="이미지정보변경" onclick="fun2()">
+	<img src="2.jpg" name="img2" onclick="fun3()">
+	<img src="3.jpg" name="img3" onmouseover="fun4()" onmouseout="fun5()">
+</body>
+</html>

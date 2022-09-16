@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js2/test1.html</title>
+<script type="text/javascript">
+//window - location 
+// 		 - history
+// 		 - document - image, div,...
+//			     	- form - text, password, textarea
+//			        - checkbox, radio
+//			    	- select
+
+// location : 웹브라우저에서 주소를 입력하는 주소줄 내장객체 정의
+//		window 생략가능
+//		window.location.변수		=> location.href 변수 : 주소줄 내용이 저장
+//		window.location.함수()   => location.reload() 함수 : 새로고침  
+
+	function fun1() {
+		// 주소줄에 내용 확인
+		alert(location.href);
+	}
+	function fun2() {
+		// 주소줄에 내용 변경
+		location.href="http://www.naver.com";
+	}
+	function fun3() {
+		// js2폴더 test1.html 이동 => 주소줄 내용을 test1.html 변경
+		location.href="test1.html";
+	}
+	function fun4() {
+		// js1폴더 test13.html 이동
+		location.href="../js1/test13.html";
+	}
+	function fun5() {
+		// 주소줄의 내용을 서버에서 새롭게 가져온다.
+		location.reload();
+	}
+	
+</script>
+</head>
+<body>
+	<a href="http://www.naver.com">하이퍼링크</a>
+	<input type="button" value="주소줄 내용" onclick="fun1()">	
+	<input type="button" value="주소줄 내용변경" onclick="fun2()">	
+	<input type="button" value="주소줄 내용변경2" onclick="fun3()">	
+	<input type="button" value="js1폴더 test13.html이동" onclick="fun4()">	
+	<input type="button" value="새로고침" onclick="fun5()">	
+</body>
+</html>
