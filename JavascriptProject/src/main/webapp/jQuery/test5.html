@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery/test5.html</title>
+<script type="text/javascript" src="jquery-3.6.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// 대상에 기존내용 사라지고 새로운 내용을 넣을 때 => 아이디 중복체크
+// 		대상.html(), 대상.text()
+		var d = $('div').html();
+// 		alert(d);
+ 		// html내용 넣기
+// 		$('div').html('<h1>값</h1>');
+ 		// 값 넣기
+// 		$('div').text('<h1>값</h1>');
+
+		$('div').html(function(index,oldhtml){
+// 			alert(index);
+// 			alert(oldhtml);
+// 			return "*"+oldhtml+"*";
+		});
+		
+		// 대상.append() 대상 뒤부분에 내용 추가
+		// 대상.prepend() 대상 앞부분에 내용 추가
+		$('body').append('<h1>추가 내용</h1>');
+		$('div').append('추가');
+		
+		$('body').prepend('<h1>앞에 추가 내용</h1>');
+		$('div').prepend('앞에 추가');
+		
+	});
+</script>
+</head>
+<body>
+<div>내용1</div>
+<div>내용2</div>
+<div>내용3</div>
+</body>
+</html>

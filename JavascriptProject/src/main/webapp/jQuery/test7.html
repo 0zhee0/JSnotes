@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery/test7.html</title>
+<script type="text/javascript" src="jquery-3.6.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+// 		대상.함수()	대상.bind('이벤트종류',기능)	대상.click(기능)
+		$('h1').bind('click', function(){
+			$(this).html('변경');
+		});
+		$('div').click(function(){
+			$(this).append('+');
+			// 이벤트 한 번만 수행하고 멈춤
+			$(this).unbind(); // bind:연결한다 , unbind:연결을 끊겠다.
+		});
+// 		$('img').mouseover(function(){
+// 			$(this).attr('src','../js2/2.jpg');
+// 		});
+// 		$('img').mouseout(function(){
+// 			$(this).attr('src','../js2/1.jpg');
+// 		});
+		
+		// 대상.함수().함수()
+		$('img').mouseover(function(){
+			$(this).attr('src','../js2/2.jpg');
+		}).mouseout(function(){
+			$(this).attr('src','../js2/1.jpg');
+		});
+		
+	});
+</script>
+
+</head>
+<body>
+<img src="../js2/1.jpg">
+<h1>head-0</h1>
+<h1>head-1</h1>
+<h1>head-2</h1>
+<div>div-0</div>
+<div>div-1</div>
+<div>div-2</div>
+</body>
+</html>

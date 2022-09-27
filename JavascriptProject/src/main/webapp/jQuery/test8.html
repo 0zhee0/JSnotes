@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery/test8.html</title>
+<script type="text/javascript" src="jquery-3.6.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#fr').submit(function(){
+// 			alert("전송");
+// 			대상.val()	value값 가져오기 함수 
+// 			alert($('#id').val());
+// 			alert($('#pass').val());
+			if($('#id').val()==""){
+// 				alert("아이디 입력");
+				$('#msg').html("아이디 입력").css('color','red');
+				$('#id').focus();
+				return false; // submit이 다음화면 넘어가지말고 멈춰라는 의미로 false값 넣어줌
+			}
+			if($('#pass').val()==""){
+// 				alert('비밀번호 입력');
+				$('#msg').html("비밀번호 입력").css('color','red');
+				$('#pass').focus();
+				return false;
+			}
+// 			alert($('#gen1').is(':checked')); // is = 같니?
+			if($('#gen1').is(':checked')==false && $('#gen2').is(':checked')==false){
+// 				alert("성별 체크");
+				$('#msg').html("성별 입력").css('color','red');
+				return false;
+			};
+		});
+	});
+</script>
+</head>
+<body>
+<form action="a.jsp" method="get" id="fr">
+아이디 <input type="text" name="id" id="id"><br>
+비밀번호 <input type="password" name="pass" id="pass"><br>
+성별 <input type="radio" name="gender" id="gen1">남
+	<input type="radio" name="gender" id="gen2">여<br>
+	<div id="msg"></div><br>
+<input type="submit" value="전송">
+</form>
+</body>
+</html>

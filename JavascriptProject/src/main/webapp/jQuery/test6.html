@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery/test6.html</title>
+<script type="text/javascript" src="jquery-3.6.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+// 		대상.each() 반복문 함수()
+		var arr=['pink','yellow','skyblue'];
+
+		$('h1').each(function(index,item){
+// 			alert(index);
+			alert(arr[index]);
+			// this 첫번째 h1, 
+			$(this).css('color',arr[index]);
+		});
+		
+		// 배열변수 대상
+		var arr2=[
+			{'id':'kim', 'name':'kimgildon'},
+			{'id':'lee', 'name':'leegildon'},
+			{'id':'hong', 'name':'honggildon'},	
+		];	
+		$.each(arr2,function(index,item){
+// 			alert(index);
+// 			alert(item.id);
+// 			alert(item.name);
+			$('div').append(item.id+','+item.name+'<br>');
+			$('table').append('<tr><td>'+item.id+'</td><td>'+item.name+'</td></tr>');
+		});
+	});
+</script>
+</head>
+<body>
+<table border="1">
+<tr><td>아이디</td><td>이름</td></tr>
+</table>
+<div></div>
+<h1>head-0</h1>
+<h1>head-1</h1>
+<h1>head-2</h1>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery/test4.html</title>
+<script type="text/javascript" src="jquery-3.6.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+//		대상.함수() attr('태그속성', '값')
+		var w = $('img').attr('width');
+// 		alert(w);
+		$('#img1').attr('width', 300);
+		$('#img1').attr('height', 200);
+		$('#img1').attr('border', 20);
+		$('#img1').attr({
+			'width': 500,
+			'height':300,
+			'border': 30
+		});
+		// img 태그 대상으로 width 100 200 300 
+		var arr=[100,200,300];
+		$('img').attr('width',function(index){
+			return arr[index];
+		});
+	});
+</script>
+</head>
+<body>
+<img src="../js2/1.jpg" width="200" height="100" border="10" id="img1">
+<img src="../js2/2.jpg" width="200" height="100" border="10">
+<img src="../js2/3.jpg" width="200" height="100" border="10">
+</body>
+</html>
