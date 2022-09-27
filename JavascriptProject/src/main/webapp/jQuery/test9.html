@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery/test8.html</title>
+<style type="text/css">
+	#d{
+		width:50px; height:50px; background-color:orange;
+	}
+</style>
+<script type="text/javascript" src="jquery-3.6.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// 효과 show() hide() toggle() , slideDown() slideUp() slideToggle()
+		//	   fadeIn() fadeOut() fadeToggle()
+		// hi태그를 클릭했을 때
+		$('h1').click(function(){
+// 			alert("클릭");
+// 			next()대상 다음 태그
+			$(this).next().toggle('slow', function(){
+// 				alert('효과 끝');
+			});
+		});
+		
+		// 애니메이션 효과
+		$('#d').click(function(){
+// 			alert("클릭");
+			var w = $(this).css('width');
+			var h = $(this).css('height');
+// 			alert(w);
+// 			alert(h);
+			// animation() 함수 이용 => 클릭할 때마다 너비 높이 50 증가
+			$(this).animate({
+				width : parseInt(w)+50, 
+				height : parseInt(h)+50
+			});
+		});	
+		
+	});
+
+</script>
+</head>
+<body>     
+<div id="d"></div>
+
+<h1>열고 닫기1</h1>
+<div>
+<h1>제목1</h1>
+<p>내용1</p>
+</div>
+<h1>열고 닫기2</h1>
+<div>
+<h1>제목2</h1>
+<p>내용2</p>
+</div>
+</body>
+</html>

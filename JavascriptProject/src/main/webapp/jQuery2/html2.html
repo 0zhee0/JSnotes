@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery2/html2.html</title>
+<script type="text/javascript" src="../jQuery/jquery-3.6.1.js"></script>
+<script type="text/javascript">
+		$(document).ready(function(){
+			$('#btn').click(function(){
+// 				alert($('#id').val());
+				$.ajax({
+					url:'html2.jsp',
+					data:{'id':$('#id').val()},
+					success:function(rdata){
+						$('#idcheck').html(rdata);
+					}
+				}); // 
+			});
+		});
+</script>
+</head>
+<body>
+아이디 : <input type="text" name="id" id="id">
+<input type="button" value="아이디 중복체크" id="btn">
+<div id="idcheck"></div>
+</body>
+</html>

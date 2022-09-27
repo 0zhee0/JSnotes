@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery2/html1.html</title>
+<script type="text/javascript" src="../jQuery/jquery-3.6.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+// 		alert('클릭');
+		$.ajax({
+//  		속성:값,
+			url:'html1.jsp',
+			success:function(rdata){
+				// html1.jsp 에서 출력한 결과를 성공적으로 rdata 변수에 받아옴
+				// body태그 뒤부분에 출력
+				$('body').append(rdata);
+			}
+		});
+		
+		// click() 버튼을 클릭했을 때 
+		$('#btn').click(function(){
+// 			alert("클릭");
+			$.ajax({
+				url:'html1.jsp',
+				// ajax() html1.jsp 에서 출력한 결과를 성공적으로 rdata 변수에 받아옴
+				success:function(rdata){
+					// append() table 태그 뒤부분에 출력
+					$('table').append('<tr><td>'+rdata+'</td></tr>');
+				}
+			});
+		});
+
+	});
+</script>
+</head>
+<body>
+<input type="button" value="버튼" id="btn">
+<table border="1">
+<tr><td>내용</td></tr>
+</table>
+
+	<h1>jQuery2/html1.html</h1>
+</body>
+</html>
